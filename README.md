@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KraftedX Practical Assignment
 
-## Getting Started
+⚠️ Disclaimer: Read this or lose a great candidature!
 
-First, run the development server:
+## Hi! This is Kartik Bindra 👋🏻
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A little about me, I'm a dedicated software engineer skilled in Full-Stack development, Blockchain development, and UI/UX Design, focused on building impactful and scalable solutions. I thrive in dynamic environments where I can apply my skills in coding, problem-solving, and design to build impactful projects. More about me here: [Check out my Portfolio](https://kartikbindra.xyz)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Task Submission
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Now, Lets talk about the Task Submission (’cause that is what you are here for anyways!)
 
-## Learn More
+So I will go through the **approach** I took to implement the asked functionalities, **what I learnt** along the way in contrast to **what I already knew** and the deeper understanding of all the things (& how they work under the hood). Here I go!
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔐 Next.js Authentication using JWT
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Instead of going the easy route with third-party libraries (like Auth.js), I decided to build the auth logic from scratch using **JWT** (JSON Web Tokens). Why? Because understanding how things actually work is _chef’s kiss_ for any real dev. 🤌🏻
 
-## Deploy on Vercel
+### What I Already Knew
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- JWT-based auth in a React + Express.js Setup
+- Access Token (Client Side Token) & Refresh Token (Server Side Token) in JWT Authentication
+- Zod Form data validation
+- Connecting serverless databases like NeonDB
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### What I Learned
+
+- Implementing JWT with the `jose` library in a Next.js app
+- Creating custom middlewares for auth logic
+- Realizing that Access Tokens aren’t necessary in a full Next.js setup (since it handles both client & server)
+- `useActionState()` hook
+
+🔗 **Go Ahead and check it out here**
+
+[Signup](https://kx-nextjs-auth.vercel.app/signup) | [Login](https://kx-nextjs-auth.vercel.app/login)
+
+---
+
+## Architecture
+
+I would like to explain the 2 different approaches for authentication with JWT. One that used React with a Express.js Server and the other using Next.js Client and Server Actions. Lets see both of them:
+
+### React + Server Based Authentication with JWT
+
+![React + Express JWT Authentication](/public/react&express+JWT.png)
+
+### Next.js Authentication with JWT (Server Actions + Middleware)
+
+![Next.js JWT Authentication](/public/nextjs+JWT.png)
+
+Look at the designs of Auth pages & workflows here: [Figma File](https://www.figma.com/design/QIksBzXkb9gaLg7Iq9BoxW/kx-submission_KartikBindra?node-id=0-1&t=I1JlaxZ2XkbwqqaV-1)
+
+---
+
+## 🎨 Blob Gradient Dynamic Background
+
+Reverse engineering this gradient was hell of a task to be completed. What helped me the most was the browser inspect tbh 👀
+
+### What I Observed
+
+The [kraftedX.com](https://kraftedx.com) website had 6 Blobs/circles/divs that were moving around the whole background space with different animations applied to them: Circular Rotation Animation, Horizontal & Vertical Animations. Each blob had a gradient applied to it. Every blob had a functionality that helped them “gravitate” towards the cursor whenever they were close to it. (or maybe vice versa, the cursor blob was getting gravitated towards the blobs whenever they were close enough!)
+
+### What I Built
+
+I implemented the animated background using 6 circular divs and a cursor pointer div. I applied almost similar animations to the blobs that I found on the KraftedX website. Although I was not able to figure out the magnetic/ gravitating effect of the blobs and the mouse pointer.
+
+> Would love to work "gravitate" feature too, but had to leave it due to upcoming end-semester examination pressure, IYKYK! 🥲
+
+Want to see the animations in action? Visit the Home and interact with the background there. Hope you like it!
+
+[Home](https://kx-nextjs-auth.vercel.app/home)  
+_Remember to Login first, or else you would not be able to access the Home page!_
+
+---
+
+Thanks for checking out my submission. Hope it gave you a peek into how I approach problems and build solutions that are equal parts functional and delightful.
+
+**Thanks for reading, hope you enjoyed the walkthrough**
+
+Signing off,  
+Chao chao! ✌️
