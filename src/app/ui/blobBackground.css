@@ -13,7 +13,7 @@
     height: 100%;
     filter: url(#goo) blur(40px);
 }
-svg {
+#svgbg {
     position: fixed;
     top: 0;
     left: 0;

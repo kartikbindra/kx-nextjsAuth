@@ -5,7 +5,7 @@ import MouseBlob from './mouseBlob';
 const BlobBackground = () => {
   return (
     <div className="blobbg fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]">
-        <svg xmlns="http://www.w3.org/2000/svg">
+        <svg xmlns="http://www.w3.org/2000/svg" id='svgbg'>
       <defs>
         <filter id="goo">
           <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
