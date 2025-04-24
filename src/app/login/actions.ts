@@ -6,7 +6,7 @@ import { createSession, deleteSession } from "../lib/session";
 import postgres from "postgres";
 import bcrypt from "bcrypt";
 
-const sql = postgres(process.env.DATABASE_URL!, {ssl: 'require'});
+const sql = postgres(process.env.NEON_DATABASE_URL!, {ssl: 'require'});
 
 // const testUser = {
 //     id: "1",
