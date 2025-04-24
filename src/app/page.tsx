@@ -3,6 +3,8 @@ import Link from 'next/link';
 import FollowCursor from './ui/followCursor';
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+import nextjsJWT from '../../public/nextjs+JWT.png';
+import reactExpressJWT from '../../public/react&express+JWT.png';
 
 const Home = () => {
   return (
@@ -55,9 +57,10 @@ const Home = () => {
         <h2 className="text-3xl font-semibold mb-2">Architecture</h2>
         <p className='mb-4'> I would like to explain the 2 different approaches for authentication with JWT. One that used React with a Express.js Server and the other using Next.js Client and Server Actions. Lets see both of them:</p>
         <h3 className="text-2xl font-semibold mb-2">React + Server Based Authentication with JWT</h3>
-        <p className="mb-4 italic">Architecture Diagram Coming Soon</p>
+        <Image src={reactExpressJWT} alt="React + Express JWT Authentication" className="rounded-md mb-4" />
         <h3 className="text-2xl font-semibold mb-2">Next.js Authentication with JWT (Server Actions + Middleware)</h3>
-        <p className="italic">Architecture Diagram Coming Soon</p>
+        <Image src={nextjsJWT} alt="Next.js JWT Authentication" className="rounded-md mb-4" />
+        <p>Look at the designs of Auth pages & workflows here: <Link className="underline flex gap-2 items-center inline-flex ml-1 text-[#ccc]" href={'https://www.figma.com/design/QIksBzXkb9gaLg7Iq9BoxW/kx-submission_KartikBindra?node-id=0-1&t=I1JlaxZ2XkbwqqaV-1'}>Figma File <ExternalLink className='w-4 h-4'/></Link></p>
       </section>
 
       <section className="mt-12">
