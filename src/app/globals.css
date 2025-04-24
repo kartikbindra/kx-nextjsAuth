@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Pixelify+Sans:wght@400..700&display=swap');
 @import "tailwindcss";
-
+@font-face {
+  font-family: "Overused Grotesk";
+  src: url('https://raw.githubusercontent.com/RandomMaerks/Overused-Grotesk/master/fonts/variable/OverusedGroteskRoman-VF.ttf') format('truetype');
+  font-weight: 300 900;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
